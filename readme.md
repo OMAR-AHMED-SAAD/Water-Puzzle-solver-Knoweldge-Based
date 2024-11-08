@@ -58,13 +58,12 @@ Successor state axioms the answer to the question if we fluent is f(_,S) true wh
         - Statement 3: for all the bottles b1 and bottles b2, if the action a is pouring then b1 and b2 are both not equal to b so we do not have any effect on b.
 
 - FOL Representation:-
-    - Helper Axioms
-    <img src="./FOL/helper.jpg" alt="helper" width="500"/>
-    <br>
-    - Top Fluent
-    <img src="./FOL/top.jpg" alt="top" width="500"/>
-    - Bottom Fluent
-    - <img src="./FOL/bottom.jpg" alt="bottom" width="500"/>
+- Helper Axioms
+<img src="./FOL/helper.jpg" alt="helper" width="500"/>
+- Top Fluent
+<img src="./FOL/top.jpg" alt="top" width="500"/>
+- Bottom Fluent
+<img src="./FOL/bottom.jpg" alt="bottom" width="500"/>
 
 
 #### 4. Examples and run time:
