@@ -1,4 +1,4 @@
-## Water Sort Puzzle Solver using Knowledge agent in prolog 
+## Water Sort Puzzle Solver using Knowledge based agent in prolog 
 
 ### Introduction:
 In this Project we are aiming to solve the water sort puzzle which we already solved using search agents in java. So, in this project we are going to solve the same puzzle using knowledge agent in prolog. Making use of successor state axioms to represent the fluents which are the states of the puzzle that gets affected with the actions.
@@ -57,7 +57,7 @@ Successor state axioms the answer to the question if we fluent is f(_,S) true wh
         
         - Statement 3: for all the bottles b1 and bottles b2, if the action a is pouring then b1 and b2 are both not equal to b so we do not have any effect on b.
 
-- FOL Representation:-
+#### FOL Representation:-
 - Helper Axioms
 <img src="./FOL/helper.jpg" alt="helper" width="500"/>
 - Top Fluent
@@ -108,19 +108,19 @@ bottle3(e,y).
 - Query 1 : **goal(S)**
 - Output 1 : **S = result(pour(1, 2), result(pour(2, 3), s0)).**
 - Time in ms : **0.0013**
-
+<br>
 - Query 2 : **goal(result(pour(1, 2), result(pour(2, 3), s0))).**
 - Output 2 : **true**
 - Time in ms : **0.00025**
-
+<br>
 - Query 3 : **goal(result(pour(2, 1), result(pour(2, 3), s0))).**
 - Output 3 : **true**
 - Time in ms : **0.00057**
-
+<br>
 - Query 4 : **goal(result(pour(2, 1), result(pour(1, 3), s0))).**
 - Output 4 : **false**
 - Time in ms : **0.00031**
-
+<br>
 - Query 5 : **goal(result(pour(1, 3), result(pour(2, 3), result(pour(1, 2), result(pour(1, 3), s0))))).**
 - Output 5 : **false**
 - Time in ms : **0.0048**
