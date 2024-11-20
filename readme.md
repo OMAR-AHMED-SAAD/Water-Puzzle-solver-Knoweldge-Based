@@ -105,22 +105,30 @@ bottle1(e,g).
 bottle2(y,g).
 bottle3(e,y).
 ```
-- Query 1 : **goal(S)**
-- Output 1 : **S = result(pour(1, 2), result(pour(2, 3), s0)).**
-- Time in ms : **0.0013**
-<br>
-- Query 2 : **goal(result(pour(1, 2), result(pour(2, 3), s0))).**
-- Output 2 : **true**
-- Time in ms : **0.00025**
-<br>
-- Query 3 : **goal(result(pour(2, 1), result(pour(2, 3), s0))).**
-- Output 3 : **true**
-- Time in ms : **0.00057**
-<br>
-- Query 4 : **goal(result(pour(2, 1), result(pour(1, 3), s0))).**
-- Output 4 : **false**
-- Time in ms : **0.00031**
-<br>
-- Query 5 : **goal(result(pour(1, 3), result(pour(2, 3), result(pour(1, 2), result(pour(1, 3), s0))))).**
-- Output 5 : **false**
-- Time in ms : **0.0048**
+- Query 1: **goal(S)**  
+  - Output 1: **S = result(pour(1, 2), result(pour(2, 3), s0)).**  
+  - Time in ms: **0.0013**
+
+---
+
+- Query 2: **goal(result(pour(1, 2), result(pour(2, 3), s0))).**  
+  - Output 2: **true**  
+  - Time in ms: **0.00025**
+
+---
+
+- Query 3: **goal(result(pour(2, 1), result(pour(2, 3), s0))).**  
+  - Output 3: **true**  
+  - Time in ms: **0.00057**
+
+---
+
+- Query 4: **goal(result(pour(2, 1), result(pour(1, 3), s0))).**  
+  - Output 4: **false**  
+  - Time in ms: **0.00031**
+
+---
+
+- Query 5: **goal(result(pour(1, 3), result(pour(2, 3), result(pour(1, 2), result(pour(1, 3), s0))))).**  
+  - Output 5: **false**  
+  - Time in ms: **0.0048**
