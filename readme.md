@@ -76,7 +76,7 @@ bottle(3).
 ```    
 ##### color/1 :
 
-This predicate is used to represent the colors in the puzzle it's asserted dynamically when the code is intialized after we extract the colors from the KB and assert the unique elements colors to our KB.
+This predicate is used to represent the colors in the puzzle it's extracted dynamically from the KB and put in a set of colors where the color predicate check if it's a member of this set.
 
 ##### situation/1 :
 A predicate definition of the situation as either base case s0 or recursive definition as result(a,s). In the implementation we added two definitions for the recursive case so when we generate the path t goal we limit the actions to valid actions only for a more optimized solution while we make use of the second definition to accept true plans that has invalid actions tha are handled by the frame part of the successor state notation.
@@ -107,7 +107,7 @@ bottle3(e,y).
 ```
 - Query 1: **goal(S)**  
   - Output 1: **S = result(pour(1, 2), result(pour(2, 3), s0)).**  
-  - Time in ms: **0.0013**
+  - Time in ms: **0.00175**
 
 ---
 
@@ -119,16 +119,16 @@ bottle3(e,y).
 
 - Query 3: **goal(result(pour(2, 1), result(pour(2, 3), s0))).**  
   - Output 3: **true**  
-  - Time in ms: **0.00057**
+  - Time in ms: **0.0025**
 
 ---
 
 - Query 4: **goal(result(pour(2, 1), result(pour(1, 3), s0))).**  
   - Output 4: **false**  
-  - Time in ms: **0.00031**
+  - Time in ms: **0.0023**
 
 ---
 
 - Query 5: **goal(result(pour(1, 3), result(pour(2, 3), result(pour(1, 2), result(pour(1, 3), s0))))).**  
   - Output 5: **false**  
-  - Time in ms: **0.0048**
+  - Time in ms: **0.036**
