@@ -1,16 +1,25 @@
-:- include('KB2.pl').
+:- include('KB.pl').
 
 bottle(1).
 bottle(2).
 bottle(3).
 
-unique_colors(Set) :-
-    findall(C, (bottle1(C, _); bottle2(C, _); bottle3(C, _); bottle1(_, C); bottle2(_, C); bottle3(_, C)), Colors),
-    list_to_set(Colors, Set).
+initialize_colors :-
+	retractall(color(_)),  % Remove all color facts
+    findall(Color, 
+            (bottle1(Color, _); bottle1(_, Color); 
+             bottle2(Color, _); bottle2(_, Color); 
+             bottle3(Color, _); bottle3(_, Color)), 
+            Colors),
+    sort(Colors, UniqueColors),      % Remove duplicates by sorting
+    maplist(assertz_color, UniqueColors).
 
-color(C) :-
-    unique_colors(Set),  
-    member(C, Set).      
+
+assertz_color(Color) :-
+    assertz(color(Color)).
+
+:- initialization(initialize_colors).
+
 
 situation(s0).
 situation(result(pour(I, J), S)) :-
